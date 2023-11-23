@@ -17,17 +17,19 @@ class Rectangulo{
     set alto(altoPositivo){
         if (altoPositivo > 1 && !isNaN(altoPositivo)) {
             this.#alto = altoPositivo;
-        }else{
-            alert("Ingrese un valor correcto")
+        } else {
+            alert("Ingrese un valor correcto");
         }
     }
+    
     set ancho(anchoPositivo){
         if (anchoPositivo > 1 && !isNaN(anchoPositivo)) {
             this.#ancho = anchoPositivo;
-        }else{
-            alert("Ingrese un valor correcto")
+        } else {
+            alert("Ingrese un valor correcto");
         }
     }
+    
 
     calcularPerimetro() {
         return 2 * (this.#alto + this.#ancho);
@@ -38,16 +40,17 @@ class Rectangulo{
     }
   
     mostrarInformacion() {
-        document.write(`Nombre: ${this.nombre} <br>`);
-        document.write(`Alto: ${this.#alto} <br>`);
-        document.write(`Ancho: ${this.#ancho} <br>`);
-        document.write(`Perímetro: ${this.calcularPerimetro()} <br>`);
-        document.write(`Área: ${this.calcularArea()} <br>`);
+        document.write(`Nombre: ${this.nombre} <br>
+        Alto: ${this.#alto} <br>
+        Ancho: ${this.#ancho} <br>
+        Perímetro: ${this.calcularPerimetro()} <br>
+        Área: ${this.calcularArea()} <br>`);
     }
 }
 
-const nombre = prompt("Ingrese nombre del rectangulo");
-const alto = parseInt(prompt("Ingrese el alto del rectangulo:"));
-const ancho = parseInt(prompt("Ingrese el ancho del rectangulo:"));
-const rectangle = new Rectangulo(nombre, alto, ancho);
+const rectangle = new Rectangulo();
+rectangle.nombre = prompt("Ingrese nombre del rectangulo");
+rectangle.alto = parseInt(prompt("Ingrese el alto del rectangulo:"));
+rectangle.ancho = parseInt(prompt("Ingrese el ancho del rectangulo:"));
+console.log(rectangle)
 rectangle.mostrarInformacion();
