@@ -151,21 +151,17 @@ class Person{
 const generarDNI = ()=> {
     return Math.floor((Math.random() * (50000000 - 10000000 + 1) + 10000000));
 }
+
 const persona = new Person();
-persona.name = "Lisandro Civili"
-persona.age = 23;
-persona.id = 42500382;
-persona.gender = "H"
-persona.weight = 76.5;
-persona.height = 1.70;
-persona.birth = 2000;
-// persona.name = prompt("Ingrese un nombre:");
-// persona.age = parseInt(prompt("Ingrese una edad: "));
-// persona.id = parseInt(prompt("D.N.I. (sin puntos): "));
-// persona.gender = (prompt("Sexo (H hombre, M mujer): "));
-// persona.weight = parseFloat(prompt("Ingrese un peso: "));
-// persona.height = parseFloat(prompt("Ingrese una altura: "));
-// persona.birth = parseInt(prompt("Ingrese una fecha de nacimiento: "));
+
+persona.name = prompt("Ingrese un nombre:");
+persona.age = parseInt(prompt("Ingrese una edad: "));
+persona.id = parseInt(prompt("D.N.I. (sin puntos): "));
+persona.gender = (prompt("Sexo (H hombre, M mujer): "));
+persona.weight = parseFloat(prompt("Ingrese un peso: "));
+persona.height = parseFloat(prompt("Ingrese una altura: "));
+persona.birth = parseInt(prompt("Ingrese una fecha de nacimiento: "));
+
 persona.mostrarGeneracion();
 persona.mostrarDatos();
 document.write(`D.N.I. random: ${generarDNI()}`);
