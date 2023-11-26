@@ -28,7 +28,7 @@ class Animal {
     }
   }
 
-  emitirSonido() {
+  makeSound() {
     document.write("-Sonido de animal-");
   }
 }
@@ -37,7 +37,7 @@ class Dog extends Animal {
   constructor(nameParam, ageParam) {
     super(nameParam, ageParam);
   }
-  emitirSonido() {
+  makeSound() {
     document.write("Guau Guau<br>");
   }
 }
@@ -46,7 +46,7 @@ class Cat extends Animal {
   constructor(nameParam, ageParam) {
     super(nameParam, ageParam);
   }
-  emitirSonido() {
+  makeSound() {
     document.write("Miau Miau<br>");
   }
 }
@@ -54,5 +54,5 @@ class Cat extends Animal {
 const perro = new Dog("puri", 10);
 const gato = new Cat("afrika", 10);
 
-perro.emitirSonido();
-gato.emitirSonido();
+perro.makeSound();
+gato.makeSound();
